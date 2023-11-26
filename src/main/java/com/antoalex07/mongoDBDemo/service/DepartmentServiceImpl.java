@@ -74,4 +74,9 @@ public class DepartmentServiceImpl implements DepartmentService{
     public Department fetchDepartmentByName(String deptName) {
         return departmentRepository.findByDeptName(deptName);
     }
+
+    @Override
+    public Department fetchDepartmentByKey(Long deptKey) {
+        return departmentRepository.findByDeptKey(deptKey);
+    }
 }

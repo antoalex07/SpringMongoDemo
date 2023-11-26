@@ -6,4 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface DepartmentRepository extends MongoRepository<Department, ObjectId> {
     public Department findByDeptName(String deptName);
+
+    public Department findByDeptKey(Long deptKey);
 }

@@ -19,4 +19,6 @@ public interface DepartmentService {
     public Department updateDepartment(Department department, ObjectId id) throws DepartmentNotFoundException;
 
     public Department fetchDepartmentByName(String deptName);
+
+    public Department fetchDepartmentByKey(Long deptKey);
 }

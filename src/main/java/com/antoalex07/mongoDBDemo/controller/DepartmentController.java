@@ -39,6 +39,12 @@ public class DepartmentController {
         return departmentService.fetchDepartmentById(id);
     }
 
+    @GetMapping("/{key}")
+    public Department fetchDepartmentByKey(@PathVariable Long deptKey){
+        LOGGER.info("Inside fetchDepartmentByKey of DepartmentController");
+        return departmentService.fetchDepartmentByKey(deptKey);
+    }
+
     @DeleteMapping("/{id}")
     public String deleteDepartmentById(@PathVariable ObjectId id){
         LOGGER.info("Inside deleteDepartmentById of DepartmentController");
